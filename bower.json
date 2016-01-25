@@ -1,0 +1,10 @@
+{
+  "name": "gh-feed-filter",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}

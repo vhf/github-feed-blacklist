@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "gh-feed-filter",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "GitHub newsfeed filter",
+    "description": "The description of the application"
+  }
+}

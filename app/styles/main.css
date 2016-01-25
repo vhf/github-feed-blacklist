@@ -1,0 +1,25 @@
+body {
+  padding: 20px;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.star:after {
+  font-size: 14px;
+  content: '\2606';
+}
+
+.on.star:after {
+  content: '\2605';
+}
+
+.fork:after {
+  font-size: 22px;
+  content: '\2ADD';
+}
+
+.on.fork:after {
+  content: '\2ADC';
+}
