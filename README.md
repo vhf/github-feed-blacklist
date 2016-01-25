@@ -6,7 +6,7 @@
 
 - This software is in beta. It works but it's not very pretty.
 - I have not published it on the Chrome Webstore yet. I'll do it once it's "production" ready.
-- To install, grap [the zip](/blob/master/package/gh-feed-filter-0.0.2.zip), unzip-it somewhere, navigate to [`chrome://extensions`](chrome://extensions) and use the `Load unpacked extension...` button.
+- To install, grap [the zip](/package/gh-feed-filter-0.0.2.zip), unzip-it somewhere, navigate to [`chrome://extensions`](chrome://extensions) and use the `Load unpacked extension...` button.
 - I didn't want to handle the setup and boilerplate so I took the first thing I found and used it. It's a yeoman generator, it works nicely but all dependencies are outdated.
 - PR most welcome. (Especially if you'd like to draw an icon or enhance the popup CSS!)
 
