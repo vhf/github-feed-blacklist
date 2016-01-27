@@ -10,7 +10,6 @@ const $ = gulpLoadPlugins();
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    'app/_locales/**',
     '!app/scripts.babel',
     '!app/*.json',
     '!app/*.html',
@@ -101,7 +100,6 @@ gulp.task('watch', ['lint', 'babel', 'html'], () => {
     'app/scripts/**/*.js',
     'app/images/**/*',
     'app/styles/**/*',
-    'app/_locales/**/*.json'
   ]).on('change', $.livereload.reload);
 
   gulp.watch('app/scripts.babel/**/*.js', ['lint', 'babel']);

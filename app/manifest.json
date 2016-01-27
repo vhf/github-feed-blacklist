@@ -1,16 +1,14 @@
 {
-  "name": "gh-feed-filter",
-  "version": "1.0.0",
   "manifest_version": 2,
+  "name": "gh-feed-filter",
+  "version": "1.0.1",
   "description": "Helps you keep your github feed clean by filtering out the noisy things!",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
-  "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/chromereload.js",
       "scripts/background.js"
     ]
   },
@@ -42,5 +40,6 @@
     },
     "default_title": "gh-feed-filter",
     "default_popup": "popup.html"
-  }
+  },
+  "homepage_url": "https://github.com/vhf/gh-feed-filter"
 }
