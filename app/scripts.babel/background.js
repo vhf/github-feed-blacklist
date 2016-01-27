@@ -8,5 +8,10 @@ chrome.runtime.onMessage.addListener(
         fork: localStorage.getItem(`${request.repo}/fork`),
       });
     }
+    if (request.update) {
+      chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, { update: true }, (response) => {});
+      });
+    }
   }
 );

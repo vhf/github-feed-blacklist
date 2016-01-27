@@ -1,8 +1,8 @@
 {
-  "name": "__MSG_appName__",
-  "version": "0.0.1",
+  "name": "gh-feed-filter",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "Helps you keep your github feed clean by filtering out the noisy things!",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
@@ -27,6 +27,9 @@
       ],
       "js": [
         "scripts/contentscript.js"
+      ],
+      "css": [
+        "styles/contentscript.css"
       ],
       "run_at": "document_end",
       "all_frames": false

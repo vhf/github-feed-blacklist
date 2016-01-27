@@ -1,4 +1,5 @@
 body {
+  min-width: 300px;
   padding: 20px;
 }
 
@@ -18,10 +19,16 @@ body {
 
 .fork:after {
   font-size: 22px;
-  content: '\2ADC';
+  content: '\2ADD';
 }
 
 /* hiding is on */
 .on.fork:after {
-  content: '\2ADD';
+  content: '\2ADC';
+}
+
+.delete:after {
+  cursor: pointer;
+  font-size: 11px;
+  content: '\274C';
 }
