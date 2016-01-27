@@ -2,7 +2,7 @@
 
 const form = document.getElementById('add');
 
-const update = () => chrome.runtime.sendMessage({ update: true }, (response) => {});
+const update = () => chrome.runtime.sendMessage({ update: true }, () => {});
 
 const newEl = (repo) => {
   // on means "hiding is on"

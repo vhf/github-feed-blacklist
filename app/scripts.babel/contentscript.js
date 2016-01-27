@@ -21,16 +21,16 @@ const feedCleaning = () => {
       if (line.parentNode) {
         if (classes.contains('watch_started')) {
           if (response.star === 'true') {
-            line.classList.add('hide');
+            line.classList.add('ghff-hide');
           } else {
-            line.classList.remove('hide');
+            line.classList.remove('ghff-hide');
           }
         }
         if (classes.contains('fork')) {
           if (response.fork === 'true') {
-            line.classList.add('hide');
+            line.classList.add('ghff-hide');
           } else {
-            line.classList.remove('hide');
+            line.classList.remove('ghff-hide');
           }
         }
       }
@@ -40,13 +40,13 @@ const feedCleaning = () => {
 
 const observer = new MutationObserver(() => {
   feedCleaning();
-  if (document.querySelectorAll('.news > .alert:not(.hide)').length < feedSize) {
+  if (document.querySelectorAll('.news > .alert:not(.ghff-hide)').length < feedSize) {
     loadNextPage();
   }
 });
 
 chrome.runtime.onMessage.addListener(
-  (request, sender) => {
+  (request) => {
     if (request.update) {
       feedCleaning();
     }
