@@ -20,13 +20,13 @@ const feedCleaning = () => {
     chrome.runtime.sendMessage({ repo }, (response) => {
       if (line.parentNode) { // ugly hack?
         let removed = false;
-        if (response.star && classes.contains('watch_started')) {
+        if (response.star === 'true' && classes.contains('watch_started')) {
           line.parentNode.removeChild(line);
           removed = true;
         }
 
         if (!removed) {
-          if (response.fork && classes.contains('fork')) {
+          if (response.fork === 'true' && classes.contains('fork')) {
             line.parentNode.removeChild(line);
           } else {
             line.classList.add('clean'); // mark line as clean

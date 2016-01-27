@@ -8,18 +8,20 @@ body {
 
 .star:after {
   font-size: 14px;
-  content: '\2606';
+  content: '\2605';
 }
 
+/* hiding is on */
 .on.star:after {
-  content: '\2605';
+  content: '\2606';
 }
 
 .fork:after {
   font-size: 22px;
-  content: '\2ADD';
+  content: '\2ADC';
 }
 
+/* hiding is on */
 .on.fork:after {
-  content: '\2ADC';
+  content: '\2ADD';
 }

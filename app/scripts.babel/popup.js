@@ -3,15 +3,22 @@
 const form = document.getElementById('add');
 
 const newEl = (repo) => {
+  // on means "hiding is on"
   let star = 'on';
-  if (localStorage.getItem(repo + '/star')) {
+  let starAction = 'Show star notifications';
+  if (localStorage.getItem(repo + '/star') === 'false') {
     star = '';
+    starAction = 'Hide star notifications';
   }
   let fork = 'on';
-  if (localStorage.getItem(repo + '/fork')) {
+  let forkAction = 'Show fork notifications';
+  if (localStorage.getItem(repo + '/fork') === 'false') {
     fork = '';
+    forkAction = 'Hide fork notifications';
   }
-  return `<li><span class="repo">${repo}</span> <span class="${star} star toggle"></span> <span class="${fork} fork toggle"></span></li>`;
+  return `<li><span class="repo">${repo}</span>
+              <span title="${starAction}" class="${star} star toggle"></span>
+              <span title="${forkAction}" class="${fork} fork toggle"></span></li>`;
 };
 
 const clickEvent = (event) => {
@@ -19,15 +26,21 @@ const clickEvent = (event) => {
   const target = event.target;
   const repo = target.parentNode.getElementsByClassName('repo')[0].innerText;
   const classes = target.classList;
+  let type;
+
+  if (classes.contains('star')) {
+    type = 'star';
+  } else if (classes.contains('fork')) {
+    type = 'fork';
+  }
 
   if (classes.contains('on')) {
+    window.localStorage.setItem(`${repo}/${type}`, 'false');
     classes.remove('on');
   } else {
     classes.add('on');
+    localStorage.setItem(`${repo}/${type}`, 'true');
   }
-
-  localStorage.setItem(repo + '/star', classes.contains('star'));
-  localStorage.setItem(repo + '/fork', classes.contains('fork'));
 };
 
 const renderList = () => {
@@ -35,7 +48,7 @@ const renderList = () => {
   const repos = [];
   const html = [];
 
-  for (let i = 0; i < localStorage.length; i += 2) {
+  for (let i = 0; i < localStorage.length; i++) {
     const repo = localStorage.key(i).split('/').slice(0, 2).join('/');
     if (repos.indexOf(repo) === -1) {
       repos.push(repo);
@@ -43,8 +56,10 @@ const renderList = () => {
     }
   }
   list.innerHTML = html.join('');
-  Array.prototype.map.call(document.querySelectorAll('.toggle'), el =>
-    el.addEventListener('click', clickEvent)
+  Array.prototype.map.call(document.querySelectorAll('.toggle'), el => {
+      el.removeEventListener('click', clickEvent);
+      el.addEventListener('click', clickEvent);
+    }
   );
 };
 
@@ -63,8 +78,8 @@ form.addEventListener('submit', (event) => {
     return false;
   }
 
-  localStorage.setItem(repo + '/star', true);
-  localStorage.setItem(repo + '/fork', true);
+  localStorage.setItem(repo + '/star', 'true');
+  localStorage.setItem(repo + '/fork', 'true');
   renderList();
 });
 
