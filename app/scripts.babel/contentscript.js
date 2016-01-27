@@ -48,7 +48,6 @@ const observer = new MutationObserver(() => {
 chrome.runtime.onMessage.addListener(
   (request, sender) => {
     if (request.update) {
-      console.log('hey');
       feedCleaning();
     }
   }

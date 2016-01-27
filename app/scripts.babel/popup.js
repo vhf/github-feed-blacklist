@@ -82,6 +82,7 @@ const renderList = () => {
       el.addEventListener('click', deleteEvent);
     }
   );
+  update();
 };
 
 document.getElementById('clear').addEventListener('click', () => {
@@ -102,7 +103,6 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem(repo + '/star', 'true');
   localStorage.setItem(repo + '/fork', 'true');
   renderList();
-  update();
 });
 
 renderList();

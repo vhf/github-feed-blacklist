@@ -3,6 +3,11 @@ body {
   padding: 20px;
 }
 
+#input {
+  width: 195px;
+  margin-left: 30px;
+}
+
 .toggle {
   cursor: pointer;
 }
