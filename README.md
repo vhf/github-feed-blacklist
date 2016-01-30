@@ -1,8 +1,8 @@
-# gh-feed-filter
+# github-feed-blacklist
 
-**gh-feed-filter** is a Chrome extension to filter GitHub's homepage feed.
+**github-feed-blacklist** is a Chrome extension to filter GitHub's homepage feed.
 
-Get [gh-feed-filter](https://chrome.google.com/webstore/detail/gh-feed-filter/bkblgjbgnaleblncknpeikiipmccijcn) from the Google Chrome Webstore!
+Get [github-feed-blacklist](https://chrome.google.com/webstore/detail/dbhboodpldcdeolligbmnhnjpkkolcnl/) from the Google Chrome Webstore!
 
 ### Disclaimer
 
@@ -12,9 +12,7 @@ Get [gh-feed-filter](https://chrome.google.com/webstore/detail/gh-feed-filter/bk
 ### What does it do
 
 - It adds an icon next to the other extensions' icons.
-- Clicking it lets you add the names of the repo you'd like to filter.
-- Once you added some repos, the empty star means it'll get filtered out, you can toggle this behaviour by clicking on the icon.
-- Same goes with the funny fork symbol.
+- Clicking it lets you add the names of the repo you'd like to filter..
 
 ### Next steps
 

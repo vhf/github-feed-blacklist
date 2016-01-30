@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "gh-feed-filter",
-  "version": "1.0.4",
+  "name": "github-feed-blacklist",
+  "version": "1.0.5",
   "description": "Helps you keep your github feed clean by filtering out the noisy things!",
   "icons": {
     "16": "images/icon-16.png",
@@ -38,8 +38,8 @@
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "gh-feed-filter",
+    "default_title": "github-feed-blacklist",
     "default_popup": "popup.html"
   },
-  "homepage_url": "https://github.com/vhf/gh-feed-filter"
+  "homepage_url": "https://github.com/vhf/github-feed-blacklist"
 }

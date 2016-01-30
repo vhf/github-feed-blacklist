@@ -1,3 +1,28 @@
 .ghff-hide {
   display: none !important;
 }
+.ghff-show {
+  display: block !important;
+}
+
+/* following class MIT License Copyright (c) 2014 Mu-An Chiou https://github.com/muan/dashboard/ */
+.filter-label {
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 3px;
+}
+/* /MIT */
+
+#hideCount {
+  padding: 5px 10px 5px 10px;
+  border-color: rgb(0, 136, 204);
+}
