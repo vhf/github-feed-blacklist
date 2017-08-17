@@ -1,3 +1,9 @@
+# [DEPRECATED] - Use [this](https://chrome.google.com/webstore/detail/github-feed-blacklist/jdkhepkbillldijjgkhacflljaancmof) instead!
+
+This extension is not maintained anymore right here but there is ongoing development happening on [BehindTheMath/github-feed-blacklist](https://github.com/BehindTheMath/github-feed-blacklist).
+
+---
+
 # github-feed-blacklist
 
 **github-feed-blacklist** is a Chrome extension to filter GitHub's homepage feed.
